@@ -1,0 +1,2 @@
+load xmpp
+xmppconnect -host talk.google.com <id>@gmail.com <password>
