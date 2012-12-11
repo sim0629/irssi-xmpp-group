@@ -9,7 +9,8 @@ sub short_nick {
 my @users;
 
 sub message_private {
-    my ($server, $msg, $nick, $address) = @_;
+    my ($server, $msg, $raw_nick, $address) = @_;
+    my ($nick) = split /\//, $raw_nick, 2;
     if(!(grep {$_ eq $nick} @users)) {
         push @users, $nick;
         #$server->command("MSG $nick <users> @users");
