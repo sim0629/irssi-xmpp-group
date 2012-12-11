@@ -20,5 +20,5 @@ sub message_private {
     }
 }
 
-Irssi::signal_add( "message private", "message_private" );
+Irssi::signal_add("message private", "message_private");
 
