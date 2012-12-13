@@ -9,7 +9,7 @@ BODY {
   margin: 4px;
 }
 DIV#content {
-  font: 12px Arial;
+  font: 12px;
 }
 DIV#insert {
   display: none;
@@ -28,4 +28,8 @@ DIV.chat DIV.msg {
 }
 DIV.chat DIV.1st {
   text-indent: -11px;
+}
+
+div {
+  font-family: NanumGothicCoding;
 }
