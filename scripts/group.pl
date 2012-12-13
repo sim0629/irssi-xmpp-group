@@ -16,7 +16,7 @@ sub message_private {
         #$server->command("MSG $nick <users> @users");
     }
     foreach my $user (@users) {
-        $server->command("MSG $user <".(short_nick $nick)."> $msg") if($user ne $nick);
+        $server->command("MSG $user ".(short_nick $nick).": $msg") if($user ne $nick);
     }
 }
 
