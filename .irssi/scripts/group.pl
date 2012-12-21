@@ -15,8 +15,12 @@ sub message_private {
         push @users, $nick;
         #$server->command("MSG $nick <users> @users");
     }
-    foreach my $user (@users) {
-        $server->command("MSG $user ".(short_nick $nick).": $msg") if($user ne $nick);
+    my @lines = split /\n/, $msg;
+    my $name = short_nick $nick;
+    foreach my $line (@lines) {
+        foreach my $user (@users) {
+            $server->command("MSG $user $name: $line") if($user ne $nick);
+        }
     }
 }
 
