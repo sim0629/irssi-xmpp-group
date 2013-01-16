@@ -22,7 +22,7 @@ sub message_private {
         foreach my $user (@users) {
             $server->command("MSG $user $name: $line") if($user ne $nick);
         }
-        Time::HiRes::sleep(0.1);
+        Time::HiRes::sleep(0.5);
     }
 }
 
